@@ -1,5 +1,12 @@
+#Autostart tmux
+#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#  exec tmux new -A -s main
+#fi
+
+#Add environment variable for editor
+EDITOR=vim
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/chris/.oh-my-zsh"
@@ -70,7 +77,7 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ansible sudo tmux kubectl)
+plugins=(git ansible ubuntu zsh-interactive-cd zsh-autosuggestions sudo tmux kubectl fzf)
 
 source $ZSH/oh-my-zsh.sh
 
